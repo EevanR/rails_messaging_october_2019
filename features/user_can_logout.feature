@@ -8,9 +8,10 @@ Feature: User can logout
         And the following user exist:
             | name | email         | password |
             | user | user@user.com | password |
+        
+        And I am logged in as "user"
 
     Scenario: Successfully log out of account
-        When I am logged in as "user"
-        And I am in the inbox
+        When I am in the inbox
         And I click on "Logout"
         Then I should see "Signed out successfully."
