@@ -26,9 +26,3 @@ Feature: Login to mailbox
         And I fill in "Password" with "notpassword"
         And I click on "Log in"
         Then I should see "Invalid Email or password"
-
-    Scenario: Successfully log out of account
-        When I am logged in as "user"
-        And I am in the inbox
-        And I click on "Logout"
-        Then I should see "Signed out successfully."
