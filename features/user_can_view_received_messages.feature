@@ -15,4 +15,4 @@ Feature: User can view sent message
         When I am in the inbox
         Then I should see "Til the end of time"
         And I should see "Subject: To dear user1"
-        And I should see "dummy1"
+        And I should see "dummy2"
