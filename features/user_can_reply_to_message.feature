@@ -1,4 +1,4 @@
-Feature: user can reply to message
+Feature: User can reply to message
     As a user
     In order to have conversations with my friends
     I want to be able to send replies to messages
@@ -9,9 +9,9 @@ Feature: user can reply to message
         | dummy1 | user1@mail.com | password | 1  |
         | dummy2 | user2@mail.com | password | 2  |
 
-    And the inbox has content
-    And I am logged in as "dummy2"
-    And I am in the inbox
+      And the inbox has content
+      And I am logged in as "dummy2"
+      And I am in the inbox
 
   Scenario: User replies to message [Happy path]
     When I click on "View"
