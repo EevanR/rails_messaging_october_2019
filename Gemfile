@@ -17,6 +17,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'coveralls', require: false
   gem 'pry-byebug'
   gem 'spring'
   gem 'rspec-rails'
