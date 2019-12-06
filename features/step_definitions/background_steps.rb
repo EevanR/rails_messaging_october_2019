@@ -16,13 +16,6 @@ Given("the following user exist:") do |table|
   end
 end
 
-Given("the inbox has content") do
-    user1 = User.find(1)
-    user2 = User.find(2)
-    user1.send_message(user2, "For ever yours", "To dear user2")
-    user2.send_message(user1, "Til the end of time", "To dear user1")
-end
-
 Given("I am in the inbox") do
   visit mailbox_inbox_path
 end
@@ -31,3 +24,13 @@ Given("I am logged in as {string}") do |name|
   user = User.find_by(name: name)
   login_as(user, scope: :user)
 end
+
+Given("the following messages exist:") do |table|
+  table.hashes.each do |hash|
+    sender = User.find_by(name: hash[:sender])
+    receiver = User.find_by(name: hash[:receiver])
+
+    sender.send_message(receiver, hash[:message], hash[:subject])
+  end
+end
+

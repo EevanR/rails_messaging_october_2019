@@ -9,7 +9,11 @@ Feature: User can reply to message
         | dummy1 | user1@mail.com | password | 1  |
         | dummy2 | user2@mail.com | password | 2  |
 
-      And the inbox has content
+      And the following messages exist:
+        | subject       | message             | sender   | receiver |
+        | To dear user2 | For ever yours      | dummy1   | dummy2   |
+        | To dear user1 | Til the end of time | dummy2   | dummy1   |
+
       And I am logged in as "dummy2"
       And I am in the inbox
 
